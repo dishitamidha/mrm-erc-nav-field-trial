@@ -65,7 +65,7 @@ void getodom(const nav_msgs::Odometry::ConstPtr& odom)
 		dist = sqrt(pow((odom_x-goal_x),2)+pow((odom_y-goal_y),2));
 		std::cout<<"Distance from goal :"<<dist<<"\n";
 		//std::cout<<"\n Status: "<<status;
-		if(dist<0.2 and goal_x!= 0 and goal_x!=11.63 and goal_x!=27.48)
+		if(dist<0.35 and goal_x!= 0 and goal_x!=11.63 and goal_x!=27.48)
 		{
 			actionlib_msgs::GoalID goal;
 			pub.publish(goal);
@@ -73,7 +73,7 @@ void getodom(const nav_msgs::Odometry::ConstPtr& odom)
 			goal_x=0;
 			goal_y=0;
 		}
-		else if(dist<0.2 and (goal_x==11.63 or goal_x==27.48))
+		else if(dist<0.35 and (goal_x==11.63 or goal_x==27.48))
 		{
 			actionlib_msgs::GoalID goal;
 			pub.publish(goal);

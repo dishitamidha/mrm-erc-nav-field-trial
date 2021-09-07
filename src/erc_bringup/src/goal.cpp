@@ -84,9 +84,9 @@ int main(int argc, char** argv){
         break;
       case 6:
         cout << "\nGoal Location: 6\n" << endl;
-        goal.target_pose.pose.position.x = 29.487;
-        goal.target_pose.pose.position.y = -13.65;
-        goal.target_pose.pose.position.z = 0.272;
+        goal.target_pose.pose.position.x = 0;
+        goal.target_pose.pose.position.y = 0;
+        goal.target_pose.pose.position.z = 0;
         break;
       default:
         cout << "\nInvalid selection. Please try again.\n" << endl;
