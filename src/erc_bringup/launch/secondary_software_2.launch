@@ -1,0 +1,5 @@
+<launch>
+<include file="$(find erc_bringup)/launch/move_base_ai.launch"/>
+<include file="$(find erc_bringup)/launch/saac_1.launch"/> 
+
+</launch>

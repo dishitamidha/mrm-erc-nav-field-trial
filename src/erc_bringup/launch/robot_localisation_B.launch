@@ -1,0 +1,21 @@
+<launch> 
+<!-- <node pkg="erc_bringup" name="wheel_odom_pose" type="wheel_pose_republish" output="screen"/>  
+<node pkg="erc_bringup" name="wheel_odom_twist" type="wheel_twist_republish" output="screen"/>   -->
+
+<node pkg="erc_bringup" name="ar_odom" type="ar2" output="screen"/> 
+
+
+<node pkg="erc_bringup" name="Cancel_goal" type="Cancel" output="screen"/>  
+
+ <!-- ekf (robot_localisation) -->
+<node name="ekf_localization_node" pkg="robot_localization" type="ekf_localization_node">
+<rosparam command="load" file="$(find erc_bringup)/config/ekf2.yaml"/>
+</node>
+
+<!-- <node name="ekf_localization_node_ar" pkg="robot_localization" type="ekf_localization_node">
+<rosparam command="load" file="$(find erc_bringup)/config/ekf_ar.yaml"/>
+<remap to="/odometry/filtered2" from="odometry/filtered"/>
+</node> -->
+
+
+</launch>

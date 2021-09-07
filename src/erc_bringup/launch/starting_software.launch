@@ -1,0 +1,23 @@
+<launch>
+
+<!-- Image Capturing Launch file -->
+<include file="$(find erc_bringup)/launch/image_capture.launch"/>
+
+<!-- ar tag detection  -->
+<include file="$(find erc_bringup)/launch/ar_tag_detection.launch"/>
+
+<!-- wheel odom republishing-->
+<node pkg="erc_bringup" name="wheel_odom_pose" type="wheel_pose_republish" output="screen"/>  
+<node pkg="erc_bringup" name="wheel_odom_twist" type="wheel_twist_republish" output="screen"/>
+
+<!-- markers goals -->
+<node pkg="erc_bringup" name="markers_goals" type="markers_rviz" output="screen"/>
+
+<node pkg="erc_bringup" name="markers_sub" type="sub_marker" output="screen"/>  
+
+<node pkg="erc_bringup" name="path" type="path.py" output="screen"/>  
+
+<!-- map  -->
+<!-- <include file="$(find erc_bringup)/launch/mapserver.launch"/> -->
+
+</launch>

@@ -1,0 +1,23 @@
+<launch>
+<arg name="storage_folder1" default="$(find erc_bringup)/media/images_center"/>
+<arg name="storage_folder2" default="$(find erc_bringup)/media/images_left"/>
+<arg name="storage_folder3" default="$(find erc_bringup)/media/images_right"/>
+
+ <node name="capture_image" pkg="image_view" type="image_saver" output="screen">
+      <remap from = "image" to = "/camera/image_raw"/>
+      <param name="save_all_image" value="false" />
+      <param name="filename_format" value="$(arg storage_folder1)/image_%04d.png" />
+  </node>
+
+   <node name="capture_image_left" pkg="image_view" type="image_saver" output="screen">
+      <remap from = "image" to = "/zed2/left/image_rect_color"/>
+      <param name="save_all_image" value="false" />
+      <param name="filename_format" value="$(arg storage_folder2)/image_%04d.png" />
+  </node>
+
+   <node name="capture_image_right" pkg="image_view" type="image_saver" output="screen">
+      <remap from = "image" to = "/zed2/right/image_rect_color"/>
+      <param name="save_all_image" value="false" />
+      <param name="filename_format" value="$(arg storage_folder3)/image_%04d.png" />
+  </node>
+</launch>

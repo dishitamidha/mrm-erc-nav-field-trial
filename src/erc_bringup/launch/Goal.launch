@@ -1,0 +1,5 @@
+<launch> 
+
+<node pkg="erc_bringup" name="send_goals" type="goal_setting" output="screen"/>  
+
+</launch>

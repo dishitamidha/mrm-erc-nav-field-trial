@@ -13,8 +13,21 @@
 
   <exec_depend>rospy</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
-  
+  <exec_depend>rtabmap_ros</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>image_view</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>rostopic</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ar_track_alvar</exec_depend>
+  <exec_depend>depthimage_to_laserscan</exec_depend>
+  
 
 </package>
