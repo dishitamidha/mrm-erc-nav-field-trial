@@ -29,7 +29,11 @@ rostopic pub /move_base/cancel actionlib_msgs/GoalID -- {}
 ```
 rosrun erc_bringup waypoint_probe_deployment.py 
 ```
->Velocity Command
+>Recovery Velocity Command
 ```
 rostopic pub -1 /cmd_vel geometry_msgs/Twist -- '[0.5, 0.0, 0.0]' '[0.0, 0.0, 0.3]'
+```
+>Rock Stuck Velocity Command
+```
+rostopic pub -1 /cmd_vel geometry_msgs/Twist -- '[0, 0.0, 0.0]' '[0.0, 0.0, 0.5]'
 ```
