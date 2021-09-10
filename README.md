@@ -29,3 +29,7 @@ rostopic pub /move_base/cancel actionlib_msgs/GoalID -- {}
 ```
 rosrun erc_bringup waypoint_probe_deployment.py 
 ```
+>Velocity Command
+```
+rostopic pub -1 /turtle1/cmd_vel geometry_msgs/Twist -- '[0.5, 0.0, 0.0]' '[0.0, 0.0, 0.3]'
+```
